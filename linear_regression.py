@@ -1,5 +1,5 @@
-def pendiente(datos_conocidos,ti, xi):
-    xiti=[]
+def pendiente(datos_conocidos, ti, xi):
+    xiti = []
     sum_xiti = 0
     sum_xi = 0
     sum_ti = 0
@@ -9,7 +9,7 @@ def pendiente(datos_conocidos,ti, xi):
     b = 0
 
     for i in range(datos_conocidos):
-        xiti.append(xi[i]*ti[i])
+        xiti.append(xi[i] * ti[i])
     print(xiti)
     for i in range(datos_conocidos):
         sum_xiti = sum_xiti + xiti[i]
@@ -33,24 +33,25 @@ def pendiente(datos_conocidos,ti, xi):
     square_sum_ti = sum_ti**2
     print(square_sum_ti)
 
-    b = ((datos_conocidos*sum_xiti)-(sum_xi*sum_ti))/((datos_conocidos*sum_square_ti)-square_sum_ti)
+    b = ((datos_conocidos * sum_xiti) - (sum_xi * sum_ti)) / \
+        ((datos_conocidos * sum_square_ti) - square_sum_ti)
 
     print(b)
 
     punto_inter(datos_conocidos, sum_ti, sum_xi, b)
 
+
 def punto_inter(datos_conocidos, sum_ti, sum_xi, b):
-    a = sum_xi/datos_conocidos - (b*(sum_ti/datos_conocidos))
+    a = sum_xi / datos_conocidos - (b * (sum_ti / datos_conocidos))
     print(a)
 
-    regresion(a,b,incognita)
+    regresion(a, b, incognita)
 
-def regresion(a,b,incognita):
-    pronostico = a + (b*incognita)
+
+def regresion(a, b, incognita):
+    pronostico = a + (b * incognita)
 
     print(pronostico)
-
-
 
 
 if __name__ == '__main__':
@@ -64,4 +65,4 @@ if __name__ == '__main__':
 
     incognita = int(input('¿Que valor quieres conocer?'))
 
-    pendiente(datos_conocidos,ti, xi)
+    pendiente(datos_conocidos, ti, xi)
