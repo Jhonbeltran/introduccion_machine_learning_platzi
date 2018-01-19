@@ -20,7 +20,6 @@ def find(pesos):
     print(output_binario)
 
     for item in output_binario:
-        print(item)
         if output_binario[item] == output_esperado_or[item]:
             comparacion_or.append(item)
 
